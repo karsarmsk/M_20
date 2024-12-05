@@ -16,12 +16,19 @@ start_kb = ReplyKeyboardMarkup(
         ],
     ],resize_keyboard=True
 )
-
-
+zayavka_kb = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text = 'Подать заявку'),
+            KeyboardButton(text = 'Редактировать')
+        ],
+    ],resize_keyboard=True
+)
+# 💬📝
 incity_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text = 'Москва', callback_data = 'm'),
+            InlineKeyboardButton(text = 'Москва', callback_data = 'Москва'),
         ],
         [
             InlineKeyboardButton(text = 'Санкт Петербург', callback_data = 'Санкт Петербург'),
@@ -64,7 +71,7 @@ country_kb = InlineKeyboardMarkup(
 vzr_kb = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton(text = '🧍1 человек', callback_data = '1 человек'),
+            InlineKeyboardButton(text = '🧍1 человек', callback_data = '🧍1 человек'),
             InlineKeyboardButton(text = '2 человека', callback_data = '2 человека'),
         ],
         [
@@ -154,34 +161,6 @@ nochi_kb = InlineKeyboardMarkup(
 
     ], resize_keyboard=True
 )
-
-proverka_kb = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text='Все верно?', callback_data='Все верно'),
-            InlineKeyboardButton(text='Изменить', callback_data='Изменить'),
-            InlineKeyboardButton(text='Продолжить', callback_data='Продолжить'),
-        ],
-
-        [
-            InlineKeyboardButton(text='🔙назад', callback_data='🔙назад'),
-        ],
-
-    ], resize_keyboard=True
-)
-zajavka_kb = InlineKeyboardMarkup(
-    inline_keyboard=[
-        [
-            InlineKeyboardButton(text="🛍 Подать заявку", url = "https://t.me/jlosos1856"),
-        ],
-        [
-            InlineKeyboardButton(text="🔙 Назад", callback_data = "🔙 Назад"),
-        ],
-    ]
-)
-
-
-
 
 
 
