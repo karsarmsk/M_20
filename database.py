@@ -1,29 +1,26 @@
 import sqlite3
-connection = sqlite3.connect('files/users.db')
-cursor = connection.cursor()
-cursor.execute('''
-CREATE TABLE IF NOT EXISTS Users(
+
+
+conn = sqlite3.connect('files/users.db')
+cur = conn.cursor()
+cur.execute('''
+CREATE TABLE IF NOT EXISTS users(
 id INTEGER PRIMARY KEY,
 incity TEXT NOT NULL,
 country TEXT NOT NULL,
 vzr TEXT NOT NULL,
-deti TEXT NOT NULL,
-hotel TEXT NOT NULL,
-pitanie TEXT NOT NULL,
-nochi TEXT NOT NULL,
-name TEXT NOT NULL,
-email TEXT NOT NULL,
-data TEXT NOT NULL,
+deti TEXT NOT NULL, 
+hotel TEXT NOT NULL, 
+pitanie TEXT NOT NULL, 
+nochi TEXT NOT NULL, 
+name TEXT NOT NULL, 
+email TEXT NOT NULL, 
+data TEXT NOT NULL 
 )
 ''')
 
-cursor.execute('INSERT INTO users(data, incity, country, vzr, deti, hotel, pitanie, nochi, name, email)VALUES(??????????)',
-               ())
 
-connection.commit()
-connection.close()
-
-cursor.execute("CREATE TABLE IF NOT EXISTS block(id INT); ")
+cur.execute("CREATE TABLE IF NOT EXISTS block(id INT); ")
 
 
 def add(id):

@@ -190,7 +190,6 @@ async def handle_email_input(message: types.Message, state):
         for line in file:
             list.append(line)
             print(list)
-
     await message.answer(list)
     # await message.answer(f'<b>Город вылета - {incity}, Страна прилета - {country},'
     #                      f'Количество взрослых -{vzr}, Количество детей - {deti} Категория отеля -{hotel},'
